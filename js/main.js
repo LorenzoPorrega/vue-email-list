@@ -12,6 +12,7 @@ const app = createApp({
   },
   methods: {
     btnClick(){
+      this.randomEmails = [];
       for(let i = 0; i < 10; i++){
       axios
         .get(url)
