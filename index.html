@@ -34,7 +34,7 @@
           <ol class="list-group list-group-numbered">
             <li class="list-group-item"
             v-for="(singleEmail, i) in randomEmails">
-              {{singleEmail}}
+            <a href="mailto:{{singleEmail}}">{{singleEmail}}</a>
             </li>
           </ol>
         </div>
