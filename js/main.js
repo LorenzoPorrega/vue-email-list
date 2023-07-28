@@ -7,19 +7,19 @@ const { createApp } = Vue;
 const app = createApp({
   data() {
     return {
-    randomEmail: [],
+    randomEmails: [],
     }
   },
   methods: {
     btnClick(){
+      for(let i = 0; i < 10; i++){
       axios.get(url).then(function (axiosResponse){
-        let randomEmail = [];
-        for(let i = 0; i < 10; i++){
-          let generatedEmail = axiosResponse.data.response;
-          randomEmail.push(generatedEmail);
-        }
-        console.log(randomEmail);
-      });
-    },
+        let randomEmails = [];
+        let generatedEmail = axiosResponse.data.response;
+        randomEmails.push(generatedEmail);
+        console.log(randomEmails);
+        });
+      }
+    }
   },
 }).mount("#app");
