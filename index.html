@@ -19,22 +19,32 @@
 </head>
 <body id="app">
   <div class="container text-center mt-5">
-    <div class="row g-2">
+    <div class="row g-5 d-flex align-items-center">
       <div class="col-6">
-
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center">Generatore di Emails random</h5>
+            <p class="card-text">Questo generatore di email casuali sfrutta VueJS, Axios e un API di Boolean che genera, ad ogni chiamata, una singola email random.</p>
+            <p class="card-text">Clicca sul pulsante in basso <span class="fw-bold fst-italic">Genera Emails</span> per popolare una lista qui a destra con 10 email casuali!</p>
+          </div>
+        </div>
       </div>
-      <div class="col-6"
-      v-for="(singleEmail, i) in randomEmail">
-        <ul>
-          <li>{{singleEmail}}</li>
-        </ul>
+      <div class="col-6">
+        <div>
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item"
+            v-for="(singleEmail, i) in randomEmails">
+              {{singleEmail}}
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
     <div class="row">
       <div class="col-4"></div>
       <div class="col-4">
-      <button type="button" class="btn btn-primary"
-      @click="btnClick">Genera le email</button>
+      <button type="button" class="btn btn-primary mt-3"
+      @click="btnClick">Genera le emails</button>
       </div>
       <div class="col-4"></div>
     </div>
